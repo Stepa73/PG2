@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>  
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        td{
+            width: 100px;
+            height: 10px;
+            text-align: center;
+        }
+        .dnes{
+            color: red;
+            background-color: blue;
+        }
+        .denMesice{
+            color: black;
+            background-color: lightblue;
+        }
+        .denMimoMesic{
+            color: lightslategrey;
+        }
+    </style>
+    <body>
+        <div id="js-calender-container"></div>
+        <script>
+           
+           /* const calendarConteiner = document.getElementById('js-calender-container');
+            const table = document.createElement('table');
+            
+            const date = new Date();
+            
+            
+            date.setDate(1);
+            const daysBeforeFirst = date.getDay() === 0 ? 7 : date.getDay();
+            
+            teble.innerHTML = "<thead><tr><th>Po</th><th>Út</th><th>St</th><th>Čt</th><th>Pa</th><th>So</th><th>Ne</th></tr></thead>";
+            
+            const body = table.appendChild("tbody");
+            
+            for (var i = 0; i < 7; i++) {
+                for (var j = 0; j < 6; j++) {
+                          const data = body.a
+}
+    
+}
+*/
+            var dnes = new Date();
+            var dnes1 = new Date();
+            
+            dnes1.setDate(1); 
+            if(dnes1.getDay() == 0) {dnes1.setDate(dnes1.getDay()-1)};
+            dnes1.setDate(dnes1.getDate()-(dnes1.getDay()-1));
+            
+            document.write("<table>");
+            document.write("<td>Pondělí</td><td>Úterý</td><td>Středa</td><td>Čtvrtek</td><td>Pátek</td><td>Sobota</td><td>Neděle</td>")
+            for(var y = 0; y < 5; y++){
+                document.write("<tr>");
+                for (var x = 0; x < 7; x++) {
+                    if(dnes1.getTime() == dnes.getTime()){
+                        document.write('<td class="dnes">'+ dnes1.getDate()+'</td>');
+                    }else if (dnes1.getMonth() == dnes.getMonth()){
+                        document.write('<td class="denMesice">'+ dnes1.getDate()+'</td>');
+                    }else{
+                        document.write('<td class="dneMimoMesic">'+ dnes1.getDate()+'</td>');
+                    }
+                    dnes1.setDate(dnes1.getDate()+1);
+                }
+                document.write("</tr>");
+            }
+           document.write("</table>");
+        </script>
+    </body>
+</html>

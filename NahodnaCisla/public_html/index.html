@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Náhodná cisla</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="losovani()">
+    <h1>Náhodná čísla</h1>
+    <p id="cislo">&nbsp;</p>
+    <p id="vylosovano"></p>
+        
+    <script>
+            var maxCisel = 100;
+            var vylosovanaCisla = new Array();
+            var nahodneCislo;
+            var spusteno=0;
+            
+            function losovani(){
+                do{
+                    nahodneCislo=Math.floor(Math.random()*maxCisel)+1;
+                }while(vylosovanaCisla.indexOf(nahodneCislo) !== -1);
+                document.getElementById("cislo").innerHTML=nahodneCislo;
+            }
+            function startStop(){
+               
+                if(spusteno==false){
+                    spusteno=setInterval("losovani()", 500);
+                }
+                else{
+                    clearInterval(spusteno);
+                    spusteno=false;
+                    vylosovanaCisla.push(nahodneCislo);
+                    document.getElementById("vylosovano").innerHTML+=" "+nahodneCislo;
+                }
+            }
+            
+    </script>   
+       
+    </body>
+</html>

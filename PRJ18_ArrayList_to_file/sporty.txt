@@ -1,0 +1,5 @@
+basketbal
+volejbal
+fotbal
+biatlon
+lukostřelba

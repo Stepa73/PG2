@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="zobrazKalendar(m,r)">
+        <div id="kalendar1">TODO write content</div>
+          
+        <script>
+
+  var datum=new Date();       //aktuální datum
+  var d=datum.getDate();      //den
+  var m=datum.getMonth()+1;   //měsíc
+  var r=datum.getFullYear();  //rok
+  
+  function kalendar(mesic,rok) {
+    var dnes=new Date();      //aktuální datum
+    var nazevMesice=new Array("","leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec");
+    var datum=new Date(rok,mesic-1,1);  //1. den v zadaném měsíci - v JavaScriptu se měsíce číslují od 0, proto musíme odečíst 1
+    var denTyd=datum.getDay();          //číslo dne v týdnu 0-neděle, 1-pondělí,... 6-sobota
+    if(denTyd==0) {denTyd=7;}           //změníme číslo neděle na 7
+    //alert(datum.toLocaleString());
+    var pocetDniMesice = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);      //počet dní v měsíci
+    if (((rok % 4 == 0) && (rok % 100 != 0)) || (rok % 400 == 0)) pocetDniMesice[2] = 29;   //přestupný rok - únor 29 dní
+    var tab="<table><thead><tr><th onclick='pred()'>&lsaquo;&lsaquo;</th><th colspan='5'>"+nazevMesice[mesic]+" "+rok+"</th><th onclick='dal()'>&rsaquo;&rsaquo;</th></tr></thead><tbody><tr><th>Po</th><th>Út</th><th>St</th><th>Čt</th><th>Pá</th><th>So</th><th>Ne</th></tr><tr>";
+    for(i=1; i<denTyd; i++) {
+      tab+="<td></td>"; //prázdné buňky před 1. dnem měsíce
+    }
+    for(den=1; den<=pocetDniMesice[mesic]; den++) {
+      if(rok==dnes.getFullYear() && mesic==dnes.getMonth()+1 && den==dnes.getDate()) {tab+="<td class='dnes'>"+den+"</td>";}
+      else {tab+="<td>"+den+"</td>";}
+      if(i % 7 == 0 && den!=pocetDniMesice[mesic]) {tab+="</tr><tr>";} 
+      i++;
+    }
+    for(i=i-1; i % 7 !=0; i++) {
+      tab+="<td></td>"; //prázdné buňky za posledním dnem měsíce pro dokončení tabulky
+    }
+    tab+="</tr></tbody></table>";
+    return tab;
+  }
+  
+  function dal() {  //funkce je spuštěna kliknutím na >> v kalendáři
+    if(m==12) {r++; m=1;}
+    else {m++;}
+    zobrazKalendar(m,r);
+  }
+  
+  function pred() {  //funkce je spuštěna kliknutím na << v kalendáři
+    if(m==1) {r--; m=12;}
+    else {m--;}
+    zobrazKalendar(m,r);
+  }
+  
+  function zobrazKalendar(mesic,rok) {   //funkce spuštěna při načtení stránky <body onload="zobrazitCas()">
+    document.getElementById("kalendar1").innerHTML=kalendar(mesic,rok); 
+  }
+</script>
+    </body>
+</html>

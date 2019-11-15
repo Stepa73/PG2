@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form onsubmit="kontrola()" >
+            <p>Jméno:                          <input type="" name="jmeno" placeholder="jméno"></p>
+        <p>Příjmení:                       <input type="" name="prijmeni"  placeholder="příjmení"></p>
+        <p>Datum Narození:          <input type="date" name="datumNarozeni"  ></p>
+        <p>Telefon:                         <input type="number" name="telefon"placeholder="777 777 777"></p>
+        <p>E-mail:                            <input type="email" name="email" placeholder="name@dome.com"> </p>
+        <p>Řidičák:                            <input type="" name="ridicak" placeholder="bla"></p>
+        <p><button onclick="kontrola()">test</button></p>
+        <p><input type="submit" value="odeslat"></p>
+        
+        
+        </form>
+        
+        <script>
+            function kontrola() {
+                
+                var zprava = "";
+                var reg;
+                reg = new RegExp("^[A-ZŽŠČŘĎŤŇ].[a-zžščřďťňáéěíýóúů]+$");
+                if(!reg.test(document.getElementsByName("jmeno")[0].value)){
+                    zprava="Zadej své jméno";
+                }
+                 if(!reg.test(document.getElementsByName("prijmeni")[0].value)){
+                    zprava="\nZadej své příjmení";}
+                    
+                 var datum = document.getElementsByName("datumNarozeni")[0].value;
+                 reg=new RegExp("^[0-9] {1,2}\.[0-9] {1,2}\.[0-9] {4}+$");   
+                  
+                if(!reg.test(datum)){
+                    zprava="\nZadej platné datum";}
+               
+        var telefon = document.getElementsByName("telefon")[0].value;
+                
+                reg = new RegExp("^([\+]420)? ?[0-9]{3} ?[0-9]{3} ?[0-9]{3}$");
+                if(!reg.test(telefon)){
+                    zprava="\nZadej platný telefon";}
+                
+                var email = document.getElementsByName("email")[0].value;
+                
+                reg=new RegExp("^[A-Za-z0-9]+\.?[A-Za-z0-9]+@[A-Za-z0-9]+\.[a-z]{2,5}$");
+                
+                if(!reg.test(email)){
+                    zprava="\nZadej platný e-mail";}
+                
+                if(zprava === ""){
+                    return true;
+                }else{
+                        alert(zprava);
+                        return false;
+                }
+                
+                
+             
+                
+            }
+            
+            
+        </script>
+    </body>
+</html>

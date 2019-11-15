@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+        
+        <script>
+            var dnes = new Date();
+            var date = new Date();
+            
+            if(date.getDay() == 0) {date.setDate(date.getDate()-7)};
+            
+            date.setDate(date.getDate() - (dnes.getDay()-1));
+            document.write("............................................................................................................");
+            document.write("<table> <tr>");
+            
+            for (var x = 0; x < 7; x++) {
+                if(date.getTime() == dnes.getTime()){
+                    document.write('<td class="dnes">'+date.getDate() + '</td>');
+                } else if (date.getMonth() == dnes.getMonth()){
+                    document.write('<td class="mesic">'+date.getDate() + '</td>');
+                }else{
+                     document.write('<td class="nic">'+date.getDate() + '</td>');
+                }
+                date.setDate(date.getDate()+1);
+}
+ document.write("</table> </tr>");
+        </script>
+    </body>
+</html>

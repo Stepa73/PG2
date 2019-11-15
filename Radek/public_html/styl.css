@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(back.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+.roh{
+	background-color: cornflowerblue;
+	height: 92px;
+	width: 6em;
+	float: left;
+		
+}
+.hornimenu{
+	background-color: rgba(71,108,175,1.00);
+	float: left;
+	width: 100%;
+	
+}
+.menu{
+	text-decoration: none;
+	color: white;
+	padding: 10px 15px;
+	font-size: 30px;
+	margin: auto;
+	margin-left: 8%;
+	
+}
+.menu:hover{
+	background-color: white;
+	color: black;
+	transition: 0.8s;
+}
+nav{
+margin: auto;
+    margin-top: 25px;
+    margin-left: 8%;
+}

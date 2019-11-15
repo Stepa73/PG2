@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        .vnitrek{
+            border: solid 1px black;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        #celek {
+            width: 408px;
+            height: 407px;
+            background-image: url(obr1.jpg);
+            background-size: cover;
+        }
+        
+            
+       
+        
+    </style>
+    <script>
+        var spravne = new Array(0,10,9,4,3);
+        var cisloFoto = 1;
+        var skryto = 0;
+        
+        function skryt (co){
+            if(co.style.backgroundColor!="rgba(240, 240, 240, 0.5)"){
+                co.style.backgroundColor = "rgba(240,240,240,0.5)";
+                skryto++;
+                document.getElementById("zakryto").innerHTML="Zakryto polí: "+skryto;
+            } else{
+                co.style.backgroundColor = "transparent"   ;
+                skryto--;
+                document.getElementById("zakryto").innerHTML="Zakryto polí: "+skryto;
+            }
+        }
+        function hotovo(){
+            if(skryto==spravne[cisloFoto]){alert("Správně");}
+            else {alert("Špatně"); novyObrazek();}
+        }
+        function novyObrazek(){
+            if(cisloFoto<4){cisloFoto++;}
+            else{cisloFoto=1;}
+            for (var i = 0; i < 16; i++) {
+            document.getElementById("celek").getElementsByTagName("div")[i].style.backgroundColor = "transparent";
+                }
+           
+            document.getElementById("celek").style.backgroundImage="url(obr"+cisloFoto+".jpg)"
+            skryto = 0;
+        }
+ 
+      
+        
+    </script>
+    <body>
+        <div id="celek">
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div class="vnitrek" onclick="skryt(this)"></div>
+            <div id="zakryto">Zakryto polí: </div>
+        </div>
+        <br>
+        <button onclick="hotovo()">Ověřit</button>
+        <button onclick="novyObrazek()">Nový Obrázek</button>
+        <p id="vypis"></p>
+    </body>
+</html>

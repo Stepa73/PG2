@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input id="jmeno" name="jmeno" >
+         <input id="jmeno" name="telefon" >
+        <button onclick="kontorla()">test</button>
+        
+        
+        <script>
+            
+            function kontorla() {
+                var zprava = "a";
+                var reg;
+                
+                
+                
+        
+                reg = new RegExp("^[A-ZŽŠČŘĎŤŇ].[a-zžščřďťňáéěíýóúů]+$");
+                
+                    if(!reg.test(document.getElementsByName("jmeno")[0].value)){
+                    zprava="Zdej své jméno";
+                    document.write(zprava);
+                }
+                reg=new RegExp("^[0-9] {1,2}\.[0-9] {1,2}\.[0-9] {4}+$");   
+                  if(!reg.test(document.getElementsByName("telefon")[0].value)){
+                    zprava="Zdej sůj telefon";
+                    document.write(zprava);
+                
+                
+            }
+            
+            
+            
+            
+    }
+            
+        </script>
+    </body>
+</html>

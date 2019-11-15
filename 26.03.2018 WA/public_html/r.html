@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="skryt();sHS();">
+        <form method="post">
+        Typ jizdenky: 
+        <select name="childrenAges" id="childrenAges"  onchange="sHS(this);">
+            <option value="non">vyber druh</option>
+            <option id="a" value="a">7denní</option>
+            <option value="b">14denní</option>
+            <option value="c">30denní</option>
+            <option value="d">90denní</option>
+            <option value="e">120denní</option>
+            <option value="f">180denní</option>
+            <option value="g">10měsíční</option>
+            <option value="h">365denní</option>
+            <option value="i">12měsíční DOT.</option>
+            <option value="j">dovozné za přepravu psa bez schránky 30denní</option>
+            
+          </select>
+        <br><p id="vypis">
+           Cena:
+        </p>
+        Od: <input type="date" id="od"> Do: <input type="date" id="do"><br>
+        E-mail: <input type="email" id="email"><br>
+        <input type="checkbox" id="ChBU"> Chci být upozorněn před koncem platnosti PČJ - počet dnů před koncem platnosti: <input type="number" id="pocetDnu"><br>
+        Způsob platby: <br><input type="radio" name="zpusob_platby" value="1" onchange="skryt()">Převodem na účet
+            <br>
+            <input type="radio" name="zpusob_platby" value="2" onchange="zobrazit()">Přímá platka kartou
+   
+            <div id="karty">
+                <input type="radio" name="karta" value="1">Maestro
+                <input type="radio" name="karta" value="2">MasterCard
+                <input type="radio" name="karta" value="3">Visa
+                <input type="radio" name="karta" value="4">Visa Electron
+            </div>
+            <input type="submit" value="Odeslat">
+            </form>
+    
+        <script>
+            function skryt() {
+                document.getElementById("karty").style.visibility = "hidden";
+            }
+            
+            function zobrazit() {
+                document.getElementById("karty").style.visibility = "visible";
+            }
+ 
+    function sHS (obj) { 
+        var curSel=obj.options[obj.selectedIndex].value;
+            
+    switch (curSel) {
+        case "a":
+        document.getElementById("vypis").innerHTML="Cena: 120 Kč";
+        break;
+         case "b":
+        document.getElementById("vypis").innerHTML="Cena: 240 Kč";
+        break;
+         case "c":
+        document.getElementById("vypis").innerHTML="Cena: 460 Kč";
+        break;
+         case "d":
+        document.getElementById("vypis").innerHTML="Cena: 1210 Kč";
+        break;
+         case "e":
+        document.getElementById("vypis").innerHTML="Cena: ----";
+        break;
+         case "f":
+        document.getElementById("vypis").innerHTML="Cena: 2150 Kč";
+        break;
+         case "g":
+        document.getElementById("vypis").innerHTML="Cena: ----";
+        break;
+         case "h":
+        document.getElementById("vypis").innerHTML="Cena: 3990 Kč";
+        break;
+         case "i":
+        document.getElementById("vypis").innerHTML="Cena: ----";
+        break;
+         case "j":
+        document.getElementById("vypis").innerHTML="Cena: ----";
+        break;
+      
+         case "non":
+        document.getElementById("vypis").innerHTML="Cena: ";
+        break;
+
+    default:
+        document.getElementById("vypis").innerHTML="Cena:";
+        break;
+}}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sportka</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .aktualni{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sportka</h1>
+        <p id="cisla"></p>
+        
+        <script>
+    reload();
+      
+    function reload(){
+        var poleCisel = new Array();
+        var pocetVylosovanychCisel = 0;
+        var nahodneCislo;
+    //vylosování náhodných čísel
+        do {
+            nahodneCislo = Math.floor(Math.random()*48)+1;
+            if (poleCisel.indexOf(nahodneCislo) === -1) {
+                poleCisel.push(nahodneCislo);
+                document.getElementById("cisla").innerHTML += nahodneCislo + " ";
+                pocetVylosovanychCisel++;
+} 
+
+        }
+            while (pocetVylosovanychCisel < 6);
+    //zobrazení čísel v tabulce
+        document.write("<table><tr>");
+        for (var i = 0; i <= 50; i++) {
+            if (poleCisel.indexOf(i) === -1) {
+                document.write("<td>"+i+"&nbsp"+"</td>");
+    
+                }    
+                else{
+                    document.write("<td class='aktualni'>"+ i +"</td>");
+                }
+                if(i % 5===0 && i!==50){ document.write("</tr><tr>");}
+                }
+                document.write("</tr></table>");
+ }
+               
+   
+        </script>
+    </body>
+</html>

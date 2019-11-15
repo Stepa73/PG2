@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .dnes{
+                color: red;
+                background-color: black;
+            }
+            table{
+                background-color: gray;
+                width: 700px;
+            }
+            .hlava{
+                background-color: black;
+                color: white;
+                
+            }
+            td{
+                border: solid 5px green;
+                text-align: center;
+                width: 100px;
+                
+            }
+       
+        </style>
+    <input type="date">
+    </head>
+    <body>
+        
+        
+        <script>
+            var datum = new Date();     //vytovoří proměnnou s akrtálním datumem
+            var dnes = datum.getDate();   // číslo dne v měsíci
+            var mesic = datum.getMonth()+1;  // číslo měsíce od 0
+            var rok = datum.getFullYear(); // rok čtyřciferně
+            var denTydne = datum.getDay(); //číslo dne v týdu
+            
+            if(denTydne===0) {denTydne=7;} //0-neděle -> 7-pondělí
+            var dnyTydne = new Array("","Pondělí","Úterý","Středa","Čtvrtek","Pátek","Sobota","Neděle");
+            document.write("<p>Dnes je "+ dnyTydne[denTydne]+" "+dnes+" ."+ mesic+"."+rok+"</p>");
+            //_____________________________________________________________________________________________________________________
+            datum.setDate(1); //posun datumu na první v měsíci
+             var denTydne = datum.getDay(); //číslo dne v týdnu
+             if(denTydne===0) {denTydne=7;} //0-neděle -> 7-pondělí
+            document.write("<p>Měsíc začínal "+ dnyTydne[denTydne]+" 1. "+ mesic+"."+rok+"</p>");
+            //_____________________________________________________________________________________________________________________
+            
+    
+            datum.setDate(1-(denTydne-1));
+    
+    
+           //datum.setDate(dnes - (denTydne-1));
+            var den = datum.getDate()  ;
+            document.write("<p>V pondělí bylo "+ den + ".<p>");
+            
+            document.write("<table><tr>");
+            for(i = 1; i<=7; i++){document.write("<th>"+dnyTydne[i]+"</th>");}
+            document.write("</tr><tr>") ;
+            for(i = 1; i <=7;i++){
+                if(den===dnes){document.write("<td class='dnes'>"+den+"</td>")  ; }
+                else {document.write("<td>"+den+"</td>");}
+                datum.setDate(den+1);
+                den=datum.getDate();
+            }
+            document.write("</tr></table>");
+        </script>
+    </body>
+</html>

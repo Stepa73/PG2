@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>Střídání fotografii</h1>
+        <p>atomatické střídání fotografie 1.jpg až 3.jpg po 2 sekundách</p>
+        
+        <img alt="foto" src="1.jpg" width="1000" height="600" id="fotogalerie">
+        
+        
+        
+        <script>
+            
+    
+            var pocet = 3;
+            var cisloFoto=1;
+           setInterval("dalsiFoto()",2000); 
+           //kolecka
+           dalsiFoto();
+           function dalsiFoto(){
+               // document.getElementById("kolecko"+cisloFoto).style.backgroundColor = "white";
+        document.getElementById("ukazatele").getElementsByTagName("div")[cisloFoto-1].style.backgroundColor = "black";
+             cisloFoto++;  
+            if(cisloFoto > pocet){cisloFoto=1;}
+           document.getElementById("fotogalerie").scr= cisloFoto+".jpg";
+         // document.getElementById("kolecko"+cisloFoto).style.backgroundColor = "white";  
+        document.getElementById("ukazatele").getElementsByTagName("div")[cisloFoto-1].style.backgroundColor = "white";
+         document.getElementById("fotogalerie").scr= cisloFoto+".jpg";
+    }
+           
+           
+           
+        </script>
+        
+        <div id="ukazatele">
+            <script>
+                for (var i = 1; i <= pocet; i++) {
+                document.write("<div id='kolecko"+i+"'></div>") ;   
+               // document.write("<div></div>");
+}
+            </script>
+        </div>
+    </body>
+</html>

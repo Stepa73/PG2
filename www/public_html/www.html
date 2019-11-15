@@ -1,0 +1,400 @@
+<html>
+    <head>
+        <title>DPMP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <select name="PrvniVyber" id="prvniVyber"  onchange="Prvni(this);">
+            <option value="non">vyber druh</option>
+            <option value="a">občanské</option>
+            <option value="b">občanské zlevněné</option>
+            <option value="c">studentské</option>
+            <option value="d">žákovské</option>
+            <option value="e">seniorské</option>
+       
+            
+          </select>
+            
+            <select name="DruhyVyber" id="druhyVyber"  onchange="Druhy(this);">
+            <option value="non">vyber druh</option>
+            <option value="a" id="kol">zóna I</option>
+            <option value="b">zóna I + II</option>
+            
+       
+            
+          </select>
+            
+            
+            <select name="TretiVyber" id="tretiVyber"  onchange="Treti(this);">
+            <option value="non">vyber druh</option>
+            <option id="a" value="a">7denní</option>
+            <option value="b">14denní</option>
+            <option value="c">30denní</option>
+            <option value="d">90denní</option>
+            <option value="e">120denní</option>
+            <option value="f">180denní</option>
+            <option value="g">10měsíční</option>
+            <option value="h">365denní</option>
+            <option value="i">12měsíční DOT.</option>
+            <option value="j">dovozné za přepravu psa bez schránky 30denní</option>
+            
+          </select>
+        </div>
+        <p id="vypis">Cena: </p>
+        <img src="tab.png" >
+        <script>
+     
+   
+    var celek;
+    var curSel1 ;
+    var curSel2;
+    var curSel3;
+    
+    function Prvni (obj) { 
+        curSel1=obj.options[obj.selectedIndex].value;
+        
+        Soucet();
+    }
+     function Druhy (obj) { 
+        curSel2=obj.options[obj.selectedIndex].value;
+        
+        Soucet();
+    }
+     function Treti (obj) { 
+        curSel3=obj.options[obj.selectedIndex].value;
+        
+        Soucet();
+    }
+ function Soucet() { 
+      if(curSel1 === undefined || curSel1 ==="non" || curSel2 === undefined || curSel2 ==="non" || curSel3 === undefined || curSel3 ==="non"){
+        
+        document.getElementById("vypis").innerHTML="Cena: NaN";
+        }
+        else{
+            
+        console.log(curSel1,curSel2,curSel3);
+            celek = curSel1+""+curSel2+""+curSel3;
+      switch (celek) {
+        
+        case "aaa":
+        document.getElementById("vypis").innerHTML="Cena: 120 Kč";
+        break;
+        case "aab":
+        document.getElementById("vypis").innerHTML="Cena: 240 Kč";
+        break;
+        case "aac":
+        document.getElementById("vypis").innerHTML="Cena: 460 Kč";
+        break;
+        case "aad":
+        document.getElementById("vypis").innerHTML="Cena: 1210 Kč";
+        break;
+        case "aae":
+        document.getElementById("vypis").innerHTML="Cena: --- ";
+        break;
+        case "aaf":
+        document.getElementById("vypis").innerHTML="Cena: 2150 Kč";
+        break;
+        case "aag":
+        document.getElementById("vypis").innerHTML="Cena: --- ";
+        break;
+        case "aah":
+        document.getElementById("vypis").innerHTML="Cena: 3990 Kč";
+        break;
+        case "aai":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "aaj":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "aba":
+        document.getElementById("vypis").innerHTML="Cena: 140 Kč";
+        break;
+        case "abb":
+        document.getElementById("vypis").innerHTML="Cena: 280 Kč";
+        break;
+        case "abc":
+        document.getElementById("vypis").innerHTML="Cena: 520 Kč";
+        break;
+        case "abd":
+        document.getElementById("vypis").innerHTML="Cena: 1350 Kč";
+        break;
+        case "abe":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "abf":
+        document.getElementById("vypis").innerHTML="Cena: 2400 Kč";
+        break;
+        case "abg":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "abh":
+        document.getElementById("vypis").innerHTML="Cena: 4480 Kč";
+        break;
+        case "abi":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "abj":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "baa":
+        document.getElementById("vypis").innerHTML="Cena: 70 Kč";
+        break;
+        case "bab":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bac":
+        document.getElementById("vypis").innerHTML="Cena: 280 Kč";
+        break;
+        case "bad":
+        document.getElementById("vypis").innerHTML="Cena: 720 Kč";
+        break;
+        case "bae":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "baf":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bag":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bah":
+        document.getElementById("vypis").innerHTML="Cena: 2480 Kč";
+        break;
+        case "bai":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "baj":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bba":
+        document.getElementById("vypis").innerHTML="Cena: 80 Kč";
+        break;
+        case "bbb":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "bbc":
+        document.getElementById("vypis").innerHTML="Cena: 310 Kč";
+        break;
+        case "bbd":
+        document.getElementById("vypis").innerHTML="Cena: 800 Kč";
+        break;
+        case "bbe":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bbf":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bbg":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bbh":
+        document.getElementById("vypis").innerHTML="Cena: 2780 Kč";
+        break;
+        case "bbi":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "bbj":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "caa":
+        document.getElementById("vypis").innerHTML="Cena: 60 Kč";
+        break;
+        case "cab":
+        document.getElementById("vypis").innerHTML="Cena: 120 Kč";
+        break;
+        case "cac":
+        document.getElementById("vypis").innerHTML="Cena: 230 Kč";
+        break;
+        case "cad":
+        document.getElementById("vypis").innerHTML="Cena: 600 Kč";
+        break;
+        case "cae":
+        document.getElementById("vypis").innerHTML="Cena: 770 Kč";
+        break;
+        case "caf":
+        document.getElementById("vypis").innerHTML="Cena: 1070 Kč";
+        break;
+        case "cag":
+        document.getElementById("vypis").innerHTML="Cena: 1650 Kč";
+        break;
+        case "cah":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "cai":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "cai":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "cba":
+        document.getElementById("vypis").innerHTML="Cena: 70 Kč";
+        break;
+        case "cbb":
+        document.getElementById("vypis").innerHTML="Cena: 140 Kč";
+        break;
+        case "cbc":
+        document.getElementById("vypis").innerHTML="Cena: 260 Kč";
+        break;
+        case "cbd":
+        document.getElementById("vypis").innerHTML="Cena: 670 Kč";
+        break;
+        case "cbe":
+        document.getElementById("vypis").innerHTML="Cena: 860 Kč";
+        break;
+        case "cbf":
+        document.getElementById("vypis").innerHTML="Cena: 1200 Kč";
+        break;
+        case "cbg":
+        document.getElementById("vypis").innerHTML="Cena: 1850 Kč";
+        break;
+        case "cbh":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "cbi":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        case "cbj":
+        document.getElementById("vypis").innerHTML="Cena: ---";
+        break;
+        
+        //--------------------------------------------------------------
+        //řešení chyb
+        case "daa":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dab":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dac":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dad":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dae":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "daf":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dag":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dah":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dai":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "daj":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        
+        case "eaa":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eab":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eac":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "ead":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eae":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eaf":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eag":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eah":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eai":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eaj":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        
+        //--------------------------------------------------------------
+        case "dba":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbb":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbc":
+        document.getElementById("vypis").innerHTML="Cena: 135 Kč";
+        break;
+        case "dbd":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbe":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbf":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbg":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbh":
+        document.getElementById("vypis").innerHTML="Cena: 450 Kč";
+        break;
+        case "dbi":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "dbj":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "eba":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "ebb":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "ebc":
+        document.getElementById("vypis").innerHTML="Cena: 165 Kč";
+        break;
+        case "ebd":
+        document.getElementById("vypis").innerHTML="Cena: 330 Kč";
+        break;
+        case "ebe":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "ebf":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "ebg":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        case "ebh":
+        document.getElementById("vypis").innerHTML="Cena: 830 Kč";
+        break;
+        case "ebi":
+        document.getElementById("vypis").innerHTML="Cena: 830 Kč";
+        break;
+        case "ebj":
+        document.getElementById("vypis").innerHTML="Cena: --- Kč";
+        break;
+        
+        
+
+    default:
+        document.getElementById("vypis").innerHTML="Cena:";
+        break;
+}     
+  
+  }
+    }
+  
+        </script>
+    </body>
+</html>

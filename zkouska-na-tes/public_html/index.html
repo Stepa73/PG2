@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+
+    <head>
+        <title>Škola je život ... ehhhmm dobrej vtip ne </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    </head>
+    <style>
+        *{
+            background-color: green;
+            color: white;
+        }
+        .kolecko{
+            border-radius: 50%;
+            border: 3px solid #000;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            float: left;
+        }
+        
+        article{
+            height: 0px;
+            margin-left: 88px;
+            margin-top: -30px;
+            z-index: 9;
+            position: absolute;
+        }
+        
+    </style>
+    <body onload="starttime()">
+        <div id="time"></div>
+        <img id="jpg" src="1.png" height="212" width="250">
+        <article>
+            <a onclick="set1()" href="#"><div id="obr1" class="kolecko"></div></a>
+             <a onclick="set2()" href="#"><div id="obr2" class="kolecko"></div></a>
+              <a onclick="set3()" href="#"><div id="obr3" class="kolecko"></div></a>
+               <a onclick="set4()" href="#"><div id="obr4" class="kolecko"></div></a>
+        </article>
+      
+        <div id="sranda"></div>
+        <h1><time>00:00:00</time></h1>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+         <script>
+  function set1() {
+      document.getElementById("jpg").scr = "1.png";
+  }
+  function set2() {
+      document.getElementById("jpg").scr = "2.png";
+  }
+  function set3() {
+      document.getElementById("jpg").scr = "3.png";
+  }
+  function set4() {
+      document.getElementById("jpg").scr = "4.png";
+  }
+    
+    
+    
+    
+    
+    
+    
+    
+    document.getElementById("obr1").style.backgroundColor= "gray";
+    var cisloJpg=1;
+        setInterval("obrazky()",2000);    
+        function obrazky(){
+                document.getElementById("jpg").src=cisloJpg+".png";
+            
+           
+         switch(cisloJpg) {  
+          case 1 :
+              document.getElementById("obr1").style.backgroundColor= "gray";
+              document.getElementById("obr4").style.backgroundColor= "white";
+          break;  
+            case 2:
+              document.getElementById("obr2").style.backgroundColor= "gray";
+              document.getElementById("obr1").style.backgroundColor= "white";
+          break;
+           case 3:
+              document.getElementById("obr3").style.backgroundColor= "gray";
+              document.getElementById("obr2").style.backgroundColor= "white";
+          break;
+           case 4:
+              document.getElementById("obr4").style.backgroundColor= "gray";
+              document.getElementById("obr3").style.backgroundColor= "white";
+          }  
+          cisloJpg++;
+            if(cisloJpg == 5){
+                cisloJpg=1;}
+                 
+}
+           play();
+            function play() {
+            const ahoj = 1;
+                    switch(ahoj) {
+
+                case 1:
+                   document.getElementById("obr1").style.backgroundcolor = "gray";
+                   document.getElementById("obr4").style.backgroundcolor = "white";
+                    break;
+                case 2:
+                    document.getElementById("obr2").style.backgroundcolor = "gray";
+                    document.getElementById("obr1").style.backgroundcolor = "white";
+                    break;
+                case 3:
+                   document.getElementById("obr3").style.backgroundcolor = "gray";
+                   document.getElementById("obr2").style.backgroundcolor = "white";
+                    break;
+                case 4:
+                    document.getElementById("obr4").style.backgroundcolor = "gray";
+                    document.getElementById("obr3").style.backgroundcolor = "white";
+            }
+            }
+
+            function starttime() {
+                cas();
+                setInterval("cas()", 1000);
+            }
+            function cas() {
+            
+            var now = new Date();
+            var min = now.getMinutes();
+            var sec = now.getSeconds();
+            var hou = now.getHours();
+            var dayIW = now.getDay();
+            var day = now.getDate();
+            var mon = now.getMonth()+1;
+            
+            if(hou<10){
+                hou= "0"+hou;
+            }
+             if(min<10){
+                min = "0"+min;
+            }
+             if(sec<10){
+                sec = "0"+sec;
+            }
+            document.getElementById("time").innerHTML="cas:"+hou+":"+min+":"+sec+"&nbsp"+day+"."+mon+".";
+                
+            
+            
+            var dnyVT = new Array("neděle","pondělí","útrý","středa","čtvrtek","pátek","sobota"); 
+            var dnyVM = new Array("","Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"); 
+            
+            document.getElementById("sranda").innerHTML= dnyVT[dayIW]+" a je "+dnyVM[mon];
+            }
+            
+       
+            var h1 = document.getElementsByTagName('h1')[0],
+                    start = document.getElementById('start'),
+                    stop = document.getElementById('stop'),
+                    reset = document.getElementById('reset'),
+            sec = 0,
+            min = 0,
+            hou = 0,
+            t;        
+    function reset() {
+            var sec = 0;
+            var min = 0;
+            var hou = 0;
+        }
+            
+             function add(){
+                sec++;
+                
+                if(sec >= 60){
+                    min++;
+                    sec =0;
+                     if(min >= 60){
+                        hou++;
+                        min=0;
+                }
+                    }
+               
+               
+                h1.textContent = (hou ? (hou > 9 ? hou : "0" + hou) : "00")+ ":" + (min ? (min > 9 ? min : "0" + min) : "00") + ":" + (sec > 9 ? sec : "0" + sec);
+                
+                timer();
+                
+                
+             }
+            function timer(){ 
+                    t = setTimeout(add, 1000);
+                
+        
+    }
+    timer();
+    
+    //start 
+    start.onclick = timer;
+    //stop
+    stop.onclick = function() {
+        clearTimeout(t);
+    }
+    
+   //reset
+   reset.onclick = function () {
+       h1.textContent = "00:00:00";
+       sec = 0; min = 0; hou = 0;
+   }
+    
+        </script>
+    </body>
+

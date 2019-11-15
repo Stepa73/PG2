@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="refresh()">
+        <h1>Antispam</h1>
+        <div id="obrazkyc">
+            <img src="cis1.png" id="c1">
+            <img src="cis1.png" id="c2">
+            <img src="cis1.png" id="c3">
+            <img src="cis1.png" id="c4">
+        </div>
+        <br><button onclick="refresh()">Jiný kód</button>
+        <p>Opiš číselný kód
+            <input type="number" id="dovnitr">
+        <button onclick="over()">OK</button>
+        </p>
+        <script>
+             
+            var poleCisel = new Array(); 
+            
+            
+    function refresh(){
+                 var celkem = 1;
+                
+                 
+                  
+                for (var i = 1; i <=4 ; i++) {
+                    poleCisel[i]=Math.floor(Math.random()*10);
+                     document.getElementById("c"+i).src="cis"+ poleCisel[i] + ".png" ;
+                }
+                
+               
+            }
+   
+    function over(){
+      
+        var celyKod = "";
+        var x = document.getElementById("dovnitr").value;
+        for (var i = 1; i <= 4; i++) {
+            celyKod += poleCisel[i]; 
+     
+}
+        if(x === celyKod){
+           alert("Dobře");  
+       }
+       else{
+           alert("špatně");
+           refresh();
+       }
+       
+   }         
+            
+            
+        </script>
+    </body>
+</html>

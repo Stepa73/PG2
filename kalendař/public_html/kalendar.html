@@ -1,0 +1,134 @@
+﻿<html>
+<head> 
+<title>JavaScript calendar</title>
+<script> 
+function displayCalendar(){
+ 
+ 
+ var htmlContent ="";
+ var FebNumberOfDens ="";
+ var counter = 1;
+ 
+ 
+ var dateNow = new Date();
+ var Mesic = dateNow.getMonth();
+
+ var nextMesic = Mesic+1; //+1; //Used to match up the current Mesic with the correct start date.
+ var prevMesic = Mesic -1;
+ var Den = dateNow.getDate();
+ var Rok = dateNow.getFullYear();
+ 
+ 
+ //pokud je únor (28 nebo 29)  
+ if (Mesic == 1){
+    if ( (Rok%100!=0) && (Rok%4==0) || (Rok%400==0)){
+      FebNumberOfDens = 29;
+    }else{
+      FebNumberOfDens = 28;
+    }
+ }
+ 
+ 
+ // Jmeno of Mesics and week Dens.
+ var MesicJmeno = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad", "Prosinec"];
+ var DenJmeno = ["Neděle","Pondělí","Úterý","Středa","Čtvrtek","Pátek", "Sobota"];
+ var DenPerMesic = ["31", ""+FebNumberOfDens+"","31","30","31","30","31","31","30","31","30","31"]
+ 
+ 
+ // Dens in previous Mesic and next one , and Den of week.
+ var nextDate = new Date(nextMesic +' 1 ,'+Rok);
+ var dentydne= nextDate.getDay();
+ var  dentydne2 = dentydne
+ var numOfDens = DenPerMesic[Mesic];
+     
+ 
+ 
+ 
+ // this leave a white space for Dens of pervious Mesic.
+ while (dentydne>0){
+    htmlContent += "<td class='MesicPre'></td>";
+ 
+ // used in next loop.
+     dentydne--;
+ }
+ 
+ // loop to build the calander body.
+ while (counter <= numOfDens){
+ 
+     // When to start new line.
+    if ( dentydne2 > 6){
+         dentydne2 = 0;
+        htmlContent += "</tr><tr>";
+    }
+ 
+ 
+ 
+    // if counter is current Den.
+    // highlight current Den using the CSS defined in header.
+    if (counter == Den){
+        htmlContent +="<td class='denTed' >"+counter+"</td>";
+    }else{
+        htmlContent +="<td class='MesicTed' >"+counter+"</td>";    
+ 
+    }
+    
+     dentydne2++;
+    counter++;
+ }
+ 
+ 
+ 
+ // building the calendar html body.
+ var calendarBody = "<table class='calendar'> <tr class='MesicNow'><th colspan='7'>"
+ +MesicJmeno[Mesic]+" "+ Rok +"</th></tr>";
+ calendarBody +="<tr class='DenJmeno'>  <td>Ned</td>  <td>Pon</td> <td>Úte</td>"+
+ "<td>Stř</td> <td>Čtv</td> <td>Pát</td> <td>Sob</td> </tr>";
+ calendarBody += "<tr>";
+ calendarBody += htmlContent;
+ calendarBody += "</tr></table>";
+ // set the content of div .
+ document.getElementById("calendar").innerHTML=calendarBody;
+ 
+}
+</script> 
+</head> 
+ 
+<body onload="displayCalendar()"> 
+ 
+<div id="calendar"></div> 
+</body> 
+<style> 
+    
+ .MesicPre{
+ color: gray;
+ text-align: center;
+}
+.MesicTed{
+ color: blue;
+ text-align: center;
+}
+.denTed{
+ border: 2px solid black;
+ color: #FF0000;
+ text-align: center;
+}
+.calendar td{
+ htmlContent: 2px;
+ width: 40px;
+}
+.MesicNow th{
+ background-color: #000000;
+ color: #FFFFFF;
+ text-align: center;
+}
+.DenJmeno{
+ background: #0FF000;
+ color: #FFFFFF;
+ text-align: center;
+}
+ 
+</style> 
+
+        
+    </body>
+</html>

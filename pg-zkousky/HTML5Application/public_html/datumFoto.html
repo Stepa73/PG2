@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Fotogalerie - fotka podle měsice
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    </head>
+    <body>
+        <h1>Fotografie podle měsíce</h1>
+        <p>Podle čísla měsíce je zobrazena příslušná fotografie mes1.jpg až mes12.jpg</p>
+        <img id="fotografie" alt="fotografieMesice" src="mes1.jpg" width="284" height="126">
+        
+        
+        <audio >ahoj</audio>
+        <script>
+            var nyni = new Date();
+            var mesic = nyni.getMonth()+1;
+            document.getElementById("fotografie").src="mes"+mesic+".jpg";
+            
+          
+        </script>
+        
+    </body>
+</html>
