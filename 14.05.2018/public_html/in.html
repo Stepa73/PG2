@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Vyber</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -37,11 +37,11 @@ and open the template in the editor.
             if(co.style.backgroundColor!="rgba(240, 240, 240, 0.5)"){
                 co.style.backgroundColor = "rgba(240,240,240,0.5)";
                 skryto++;
-                document.getElementById("zakryto").innerHTML="Zakryto polí: "+skryto;
+                document.getElementById("zakryto").innerHTML= ""+skryto;
             } else{
                 co.style.backgroundColor = "transparent"   ;
                 skryto--;
-                document.getElementById("zakryto").innerHTML="Zakryto polí: "+skryto;
+                document.getElementById("zakryto").innerHTML= ""+skryto; 
             }
         }
         function hotovo(){
@@ -49,6 +49,7 @@ and open the template in the editor.
             else {alert("Špatně"); novyObrazek();}
         }
         function novyObrazek(){
+            document.getElementById("zakryto").innerHTML="0";
             if(cisloFoto<4){cisloFoto++;}
             else{cisloFoto=1;}
             for (var i = 0; i < 16; i++) {
@@ -80,7 +81,7 @@ and open the template in the editor.
             <div class="vnitrek" onclick="skryt(this)"></div>
             <div class="vnitrek" onclick="skryt(this)"></div>
             <div class="vnitrek" onclick="skryt(this)"></div>
-            <div id="zakryto">Zakryto polí: </div>
+            <div>Zakryto polí: <span id="zakryto">0</span></div>
         </div>
         <br>
         <button onclick="hotovo()">Ověřit</button>
