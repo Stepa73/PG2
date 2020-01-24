@@ -14,18 +14,21 @@ Zdražil Štěpán 2.F
         <p>Kostky</p>
         <input id="maxCislo2" type="number">
         <button onclick="hazej()">Hazej</button>
-        
+        <div id="slov"></div>
         <div id="OP"></div> 
         
         <script>
            
- 
+            var popis = ["","Jedna","Dva","Tři","Čtiři","Pět","Šest"];
             function hazej(){
                  var celkem = 1;
+                 document.getElementById("slov").innerHTML = null;
                  document.getElementById("OP").innerHTML = null;
+                 
                   do{
                     var random=Math.floor(Math.random()*6)+1;
-                     document.getElementById("OP").innerHTML+="<img src='kos" + random + ".png'>" ;
+                    document.getElementById("slov").innerHTML+=popis[random] +" "; 
+                     document.getElementById("OP").innerHTML+="<img src='kos" + random + ".png' alt='"+popis[random]+"'>" ;
                     celkem++;
                 }
                 while(celkem <=  (document.getElementById("maxCislo2").value));
