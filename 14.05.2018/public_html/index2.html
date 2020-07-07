@@ -5,45 +5,51 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/lightbox.min.css">
-        <script src="js/lightbox-plus-jquery.min.js"></script>
-        
-    </head>
-    <body>
-        <div class="gallery">
-            <a href="obr1.jpg" rel="lightbox" data-lightbox="mygallery"><img src="obr1.jpg" width="400" height="250" alt="obr1"/></a>
-            <a href="obr2.jpg" rel="lightbox" data-lightbox="mygallery"><img src="obr2.jpg" width="400" height="250" alt="obr2"/></a>
-            <a href="obr3.jpg" rel="lightbox" data-lightbox="mygallery"><img src="obr3.jpg" width="400" height="250" alt="obr3"/></a>
-           
-            <textarea name="myTextarea" id="myTextarea"></textarea>
-        </div>
-        <script src="tinymce/tinymce.min.js"></script>
-        <script src="https://fastcdn.org/Lightbox/2.8.1/js/lightbox.min.js"></script>
-            <script>
-                tinymce.init({
-                    selector: '#myTextarea',
-                    height: 500,
-                    theme: 'modern',
-                    plugins: [
-                      'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-                      'searchreplace wordcount visualblocks visualchars code fullscreen',
-                      'insertdatetime media nonbreaking save table contextmenu directionality',
-                      'emoticons template paste textcolor colorpicker textpattern imagetools'
-                    ],
-                    toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-                    toolbar2: 'print preview media | forecolor backcolor emoticons',
-                    image_advtab: true
-                });
-                
-            </script>
-    
-        
-        
-    </body>
-    
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+
+</head>
+<body>
+<div class="gallery">
+
+    <a href="obr1.jpg" rel="lightbox" data-lightbox="mygallery">
+        <img src="obr1.jpg" width="400" height="250" alt="obr1"/>
+    </a>
+    <a href="obr2.jpg" rel="lightbox" data-lightbox="mygallery">
+        <img src="obr2.jpg" width="400" height="250" alt="obr2"/>
+    </a>
+    <a href="obr3.jpg" rel="lightbox" data-lightbox="mygallery">
+        <img src="obr3.jpg" width="400" height="250" alt="obr3"/>
+    </a>
+
+    <textarea name="myTextarea" id="myTextarea"></textarea>
+</div>
+<script src="tinymce/tinymce.min.js"></script>
+<script src="https://fastcdn.org/Lightbox/2.8.1/js/lightbox.min.js"></script>
+<script>
+    tinymce.init({
+        selector: '#myTextarea',
+        height: 500,
+        theme: 'modern',
+        plugins: [
+            'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            'searchreplace wordcount visualblocks visualchars code fullscreen',
+            'insertdatetime media nonbreaking save table contextmenu directionality',
+            'emoticons template paste textcolor colorpicker textpattern imagetools'
+        ],
+        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        toolbar2: 'print preview media | forecolor backcolor emoticons',
+        image_advtab: true
+    });
+
+</script>
+
+
+</body>
+
 </html>

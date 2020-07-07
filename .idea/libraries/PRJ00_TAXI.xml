@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PRJ00_TAXI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/PRJ00_TAXI/dist/PRJ00_TAXI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

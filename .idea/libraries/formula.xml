@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="formula">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/formula/dist/formula.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

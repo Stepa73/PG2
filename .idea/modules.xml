@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/000_DB/000_DB.iml" filepath="$PROJECT_DIR$/000_DB/000_DB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/00_KROUŽEK/00_KROUŽEK.iml" filepath="$PROJECT_DIR$/00_KROUŽEK/00_KROUŽEK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_KROUŽEK/01_KROUŽEK.iml" filepath="$PROJECT_DIR$/01_KROUŽEK/01_KROUŽEK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/000_DB/DB.iml" filepath="$PROJECT_DIR$/000_DB/DB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaApplication72/JavaApplication72.iml" filepath="$PROJECT_DIR$/JavaApplication72/JavaApplication72.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaFX01_Login/JavaFX01_Login.iml" filepath="$PROJECT_DIR$/JavaFX01_Login/JavaFX01_Login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaFX02_FXML_login/JavaFX02_FXML_login.iml" filepath="$PROJECT_DIR$/JavaFX02_FXML_login/JavaFX02_FXML_login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaFX03_FXML_Calculation/JavaFX03_FXML_Calculation.iml" filepath="$PROJECT_DIR$/JavaFX03_FXML_Calculation/JavaFX03_FXML_Calculation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaFXML/JavaFXML.iml" filepath="$PROJECT_DIR$/JavaFXML/JavaFXML.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PG2.iml" filepath="$PROJECT_DIR$/.idea/PG2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ00_TAXI/PRJ00_TAXI.iml" filepath="$PROJECT_DIR$/PRJ00_TAXI/PRJ00_TAXI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ01_ABSTRAKT/PRJ01_ABSTRAKT.iml" filepath="$PROJECT_DIR$/PRJ01_ABSTRAKT/PRJ01_ABSTRAKT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ02_INTERFACE/PRJ02_INTERFACE.iml" filepath="$PROJECT_DIR$/PRJ02_INTERFACE/PRJ02_INTERFACE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ03_InterfaceAbstrac/PRJ03_InterfaceAbstrac.iml" filepath="$PROJECT_DIR$/PRJ03_InterfaceAbstrac/PRJ03_InterfaceAbstrac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ04_Swing/PRJ04_Swing.iml" filepath="$PROJECT_DIR$/PRJ04_Swing/PRJ04_Swing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ05_Swing_automat/PRJ05_Swing_automat.iml" filepath="$PROJECT_DIR$/PRJ05_Swing_automat/PRJ05_Swing_automat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ07_Swing_login/PRJ07_Swing_login.iml" filepath="$PROJECT_DIR$/PRJ07_Swing_login/PRJ07_Swing_login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ08_ObjectsOrdering/PRJ08_ObjectsOrdering.iml" filepath="$PROJECT_DIR$/PRJ08_ObjectsOrdering/PRJ08_ObjectsOrdering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ09_ArrayList/PRJ09_ArrayList.iml" filepath="$PROJECT_DIR$/PRJ09_ArrayList/PRJ09_ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ10_ArrayListSort/PRJ10_ArrayListSort.iml" filepath="$PROJECT_DIR$/PRJ10_ArrayListSort/PRJ10_ArrayListSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ11_TreeSet/PRJ11_TreeSet.iml" filepath="$PROJECT_DIR$/PRJ11_TreeSet/PRJ11_TreeSet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ12_TreeMap/PRJ12_TreeMap.iml" filepath="$PROJECT_DIR$/PRJ12_TreeMap/PRJ12_TreeMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ13_/PRJ13_.iml" filepath="$PROJECT_DIR$/PRJ13_/PRJ13_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ14_JlistGUI/PRJ14_JlistGUI.iml" filepath="$PROJECT_DIR$/PRJ14_JlistGUI/PRJ14_JlistGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ15_vyjimky/PRJ15_vyjimky.iml" filepath="$PROJECT_DIR$/PRJ15_vyjimky/PRJ15_vyjimky.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ17_SouboryTXT/PRJ17_SouboryTXT.iml" filepath="$PROJECT_DIR$/PRJ17_SouboryTXT/PRJ17_SouboryTXT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ18_ArrayList_to_file/PRJ18_ArrayList_to_file.iml" filepath="$PROJECT_DIR$/PRJ18_ArrayList_to_file/PRJ18_ArrayList_to_file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ19_CSV/PRJ19_CSV.iml" filepath="$PROJECT_DIR$/PRJ19_CSV/PRJ19_CSV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PRJ20_ObjektoveSoubory/PRJ20_ObjektoveSoubory.iml" filepath="$PROJECT_DIR$/PRJ20_ObjektoveSoubory/PRJ20_ObjektoveSoubory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prj06_Swing_Calculator/Prj06_Swing_Calculator.iml" filepath="$PROJECT_DIR$/Prj06_Swing_Calculator/Prj06_Swing_Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prj15_Vyjimky2/Prj15_Vyjimky2.iml" filepath="$PROJECT_DIR$/Prj15_Vyjimky2/Prj15_Vyjimky2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/formula/formula.iml" filepath="$PROJECT_DIR$/formula/formula.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
 </project>

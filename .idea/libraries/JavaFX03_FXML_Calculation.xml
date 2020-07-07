@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JavaFX03_FXML_Calculation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JavaFX03_FXML_Calculation/dist/JavaFX03_FXML_Calculation.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
